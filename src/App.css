@@ -7,11 +7,12 @@
   height: 80px;
 }
 
-.App-header {
+.Search-container {
   background-color: #222;
-  height: 150px;
+  height: 250px;
   padding: 20px;
   color: white;
+  text-align: center;
 }
 
 .App-title {
@@ -20,6 +21,38 @@
 
 .App-intro {
   font-size: large;
+}
+
+.Search-header {
+  font-size: large;
+  padding: 20px;
+}
+
+.Search-input {
+  min-width: 500px;
+}
+
+.Search-option-selected {
+  background-color: red;
+}
+
+.Search-option-default {
+  background-color: grey;
+}
+
+.Search-options-table {
+  display: table;
+}
+
+.Search-options-row {
+  width: 100%;
+  display: table-row;
+}
+
+.Search-options-cell {
+  border: 0px;
+	display: table-cell;
+	padding: 3px 10px;
 }
 
 @keyframes App-logo-spin {
