@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .App-logo {
@@ -9,7 +10,6 @@
 
 .Search-container {
   background-color: #222;
-  height: 250px;
   padding: 20px;
   color: white;
   text-align: center;
@@ -58,4 +58,16 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.Search-result {
+  background-color: black;
+  color: white;
+}
+
+.Footer {
+  background-color: black;
+  color: red;
+  text-align: left;
+  padding: 30px;
 }
