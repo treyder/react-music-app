@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`search options renders correctly 1`] = `
+<div
+  className="Search-options-table"
+>
+  <div
+    className="Search-options-row"
+  >
+    <div
+      className="Search-options-cell"
+    >
+      SEARCH BY
+    </div>
+    <button
+      className="MuiButtonBase-root-40 MuiButton-root-25 MuiButton-raised-30 MuiButton-raisedPrimary-31 MuiButton-sizeSmall-37"
+      disabled={false}
+      id="titleButton"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex="0"
+      type="button"
+    >
+      <span
+        className="MuiButton-label-26"
+      >
+        TITLE
+      </span>
+      <span
+        className="MuiTouchRipple-root-42"
+      />
+    </button>
+    <button
+      className="MuiButtonBase-root-40 MuiButton-root-25 MuiButton-raised-30 MuiButton-raisedSecondary-32 MuiButton-sizeSmall-37"
+      disabled={false}
+      id="genreButton"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex="0"
+      type="button"
+    >
+      <span
+        className="MuiButton-label-26"
+      >
+        GENRE
+      </span>
+      <span
+        className="MuiTouchRipple-root-42"
+      />
+    </button>
+  </div>
+</div>
+`;

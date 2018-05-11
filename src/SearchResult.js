@@ -2,32 +2,22 @@ import React from 'react';
 import MovieItemList from './MovieItemList';
 
 class SearchResult extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
-            moviesList: undefined,
             sortBy: "date"
         }
-
-        fetch("http://react-cdp-api.herokuapp.com/movies?searchBy=title").
-            then(result => {
-                return result.json();
-            }).
-            then((response) => {
-                const newState = Object.assign({}, this.state);
-                newState.moviesList = Object.assign([], response.data);
-                this.setState(newState);
-            });
     }
 
     render() {
-        if (this.state.moviesList == undefined) {
+        if (this.props.moviesList == undefined) {
             return (
                 <div className="Search-result">
                     Start searching ...
                 </div>
             );
-        } else if (this.state.moviesList.length == 0) { 
+        } else if (this.props.moviesList.length == 0) { 
             return (
                 <div className="Search-result">
                     No films found
@@ -36,8 +26,8 @@ class SearchResult extends React.Component {
         }
         else {
             return (
-                <div className="Search-result SearchResult-column">
-                    {this.state.moviesList.map((item) => <MovieItemList key={item.id} title={item.title} img={item.poster_path} genre={item.genres} rating={item.vote_count} />)}
+                <div id="searchResultList" className="Search-result SearchResult-column">
+                    {this.props.moviesList.map((item) => <MovieItemList key={item.id} title={item.title} img={item.poster_path} genre={item.genres} rating={item.vote_count} />)}
                 </div>
             );
         }

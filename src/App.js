@@ -4,7 +4,6 @@ import AppTitle from './AppTitle';
 import SearchHeader from './SearchHeader';
 import SearchForm from './SearchForm';
 import ErrorBoundary from './ErrorBoundary';
-import SearchResult from './SearchResult';
 import Footer from './Footer';
 
 import './css/App.css';
@@ -19,10 +18,8 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             {AppTitle}
             {SearchHeader}
-            {SearchForm}
+            <SearchForm/>
           </div>
-
-          <SearchResult/>
 
           {Footer}
         </div>

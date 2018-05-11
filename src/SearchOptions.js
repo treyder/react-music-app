@@ -18,6 +18,7 @@ class SearchOptions extends React.PureComponent {
             titleOptionColor: 'primary',
             genreOptionColor: 'secondary'
         });
+        this.props.actionOnChange({searchBy: 'title'});
     }
 
     handleGenreOptionChange() {
@@ -25,6 +26,7 @@ class SearchOptions extends React.PureComponent {
             titleOptionColor: 'secondary',
             genreOptionColor: 'primary'
         });
+        this.props.actionOnChange({searchBy: 'genres'});
     }
 
     render() {

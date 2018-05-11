@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm renders initial form state 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    className="Search-input"
+    id="searchText"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <div
+    className="Search-options-table"
+  >
+    <div
+      className="Search-options-row"
+    >
+      <div
+        className="Search-options-cell"
+      >
+        <div
+          className="Search-options-table"
+        >
+          <div
+            className="Search-options-row"
+          >
+            <div
+              className="Search-options-cell"
+            >
+              SEARCH BY
+            </div>
+            <button
+              className="MuiButtonBase-root-16 MuiButton-root-1 MuiButton-raised-6 MuiButton-raisedPrimary-7 MuiButton-sizeSmall-13"
+              disabled={false}
+              id="titleButton"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex="0"
+              type="button"
+            >
+              <span
+                className="MuiButton-label-2"
+              >
+                TITLE
+              </span>
+              <span
+                className="MuiTouchRipple-root-18"
+              />
+            </button>
+            <button
+              className="MuiButtonBase-root-16 MuiButton-root-1 MuiButton-raised-6 MuiButton-raisedSecondary-8 MuiButton-sizeSmall-13"
+              disabled={false}
+              id="genreButton"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex="0"
+              type="button"
+            >
+              <span
+                className="MuiButton-label-2"
+              >
+                GENRE
+              </span>
+              <span
+                className="MuiTouchRipple-root-18"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="Search-options-cell"
+      >
+        <button
+          className="MuiButtonBase-root-16 MuiButton-root-1 MuiButton-raised-6 MuiButton-raisedPrimary-7"
+          disabled={false}
+          id="submitButton"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex="0"
+          type="submit"
+        >
+          <span
+            className="MuiButton-label-2"
+          >
+            SEARCH
+          </span>
+          <span
+            className="MuiTouchRipple-root-18"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Search-result"
+  >
+    Start searching ...
+  </div>
+</form>
+`;

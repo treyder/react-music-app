@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResult renders in case of no results - No films found 1`] = `
+<div
+  className="Search-result"
+>
+  No films found
+</div>
+`;
+
+exports[`SearchResult renders initial state to - Start searching 1`] = `
+<div
+  className="Search-result"
+>
+  Start searching ...
+</div>
+`;
+
+exports[`SearchResult renders list of movies - List 1`] = `
+<div
+  className="Search-result SearchResult-column"
+  id="searchResultList"
+>
+  <div
+    className="movieItemList"
+  >
+    <img
+      src="img_src"
+    />
+    some title
+     
+    1055
+    test genre
+  </div>
+  <div
+    className="movieItemList"
+  >
+    <img
+      src="img_src2"
+    />
+    some title2
+     
+    1056
+    test genre2
+  </div>
+</div>
+`;
