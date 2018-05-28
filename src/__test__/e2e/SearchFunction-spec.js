@@ -1,5 +1,6 @@
 describe('app main search function', function() {
 
+    
     browser.waitForAngularEnabled(false);
 
     it("search for LOTR", function() {

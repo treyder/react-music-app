@@ -9,7 +9,6 @@ exports[`SearchForm renders initial form state 1`] = `
     id="searchText"
     onChange={[Function]}
     type="text"
-    value=""
   />
   <div
     className="Search-options-table"
