@@ -1,28 +1,40 @@
 import React from 'react';
 import { connect } from "react-redux";
+import { Redirect } from 'react-router-dom';
 import Button from 'material-ui/Button';
 
 import SearchOptions from './SearchOptions';
 import SearchResult from './SearchResult';
 
-import { fetchMovies, searchTextChange, searchByChange } from './actions/searchActions';
+import { redirectToSearchForMovies, searchTextChange, searchByChange } from './actions/searchActions';
 
 export class SearchForm extends React.Component {
 
     constructor(props) {
         super(props);
         
-        this.baseServiceUrl = "http://react-cdp-api.herokuapp.com";
         this.handleSubmit = this.handleSubmit.bind(this);
+        
+        if (this.props.location) {
+            const params = new URLSearchParams(this.props.location.search);
+            const searchBy = params.get('searchBy');
+            if (searchBy) {
+                this.props.dispatch(searchByChange(searchBy));
+            }
+            const searchText = params.get('searchText');
+            if (searchText) {
+                this.props.dispatch(searchTextChange(searchText));
+            }
+        }
     }
 
     handleSubmit(event) {
         event.preventDefault();
-        this.props.dispatch(fetchMovies(this.baseServiceUrl, this.props.searchBy, this.props.searchText));
+        this.props.dispatch(redirectToSearchForMovies(this.props.searchBy, this.props.searchText));
     }
 
     render() {
-        const { error, loading, movies, searchText } = this.props;
+        const { error, loading, movies, searchText, redirect } = this.props;
 
         if (error) {
             return <div>Error! {error.message}</div>;
@@ -32,9 +44,14 @@ export class SearchForm extends React.Component {
             return <div>Loading...</div>;
         }
 
+        if (redirect) {
+            const url = '/search/Search Query?searchBy=' + this.props.searchBy + '&searchText=' + this.props.searchText;
+            return <Redirect to={url} />;
+        }
+
         return (
             <form onSubmit={this.handleSubmit}>
-                <input type="text" id="searchText" onChange={event => this.props.dispatch(searchTextChange(event.target.value))} className="Search-input"/>
+                <input type="text" id="searchText" value={this.props.searchText} onChange={event => this.props.dispatch(searchTextChange(event.target.value))} className="Search-input"/>
                 <div className="Search-options-table">
                     <div className="Search-options-row">
                         <div className="Search-options-cell">
@@ -45,7 +62,6 @@ export class SearchForm extends React.Component {
                         </div>
                     </div>
                 </div>
-                <SearchResult moviesList={this.props.movies} />
             </form>
         );
     }
@@ -57,7 +73,8 @@ function mapStateToProps(state) {
         loading: state.searchReducer.loading,
         error: state.searchReducer.error,
         searchText: state.searchReducer.searchText,
-        searchBy: state.searchReducer.searchBy
+        searchBy: state.searchReducer.searchBy,
+        redirect: state.searchReducer.redirect
     }
 };
 

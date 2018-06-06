@@ -3,7 +3,8 @@ import {
     SEARCH_MOVIES_SUCCESS,
     SEARCH_MOVIES_FAILURE,
     SEARCH_TEXT_CHANGE,
-    SEARCH_BY_CHANGE
+    SEARCH_BY_CHANGE,
+    SEARCH_MOVIES_REDIRECT
 } from '../actions/searchActionTypes';
 
 export function fetchMovies(baseServiceUrl, searchBy, searchText) {
@@ -20,6 +21,12 @@ export function fetchMovies(baseServiceUrl, searchBy, searchText) {
             catch(error => dispatch(searchMoviesError(error)));
     };
 };
+
+export const redirectToSearchForMovies = (searchBy, searchText) => ({
+    type: SEARCH_MOVIES_REDIRECT,
+    searchBy,
+    searchText
+});
 
 export const searchByChange = searchBy => ({
     type: SEARCH_BY_CHANGE,
